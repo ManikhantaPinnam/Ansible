@@ -1,2 +1,12 @@
 ---
 # handlers file for mytom7Installredhat
+- name: starttomcat
+  service:
+    name: tomcat
+    state: started
+    enabled: yes
+
+- name: restarttomcat
+  service:
+    name: tomcat
+    state: restarted
